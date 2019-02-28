@@ -1,0 +1,169 @@
+{include file='Common/head.html'}
+<body>
+<div class="wrapper">
+    <!-- START HEADER -->
+    {include file='Common/bodyhead.html'}
+    <!-- END HEADER -->
+
+    <!-- START MAIN -->
+    <div id="main">
+        <!-- START SIDEBAR -->
+        {include file='Common/sidebar.html'}
+        <!-- END SIDEBAR -->
+
+        <!-- START PAGE -->
+        <div id="page">
+            <!-- start page title -->
+            <div class="page-title">
+                <div class="in">
+                    <div class="titlebar">	<h2>博文管理</h2>	<p>博文列表</p></div>
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <!-- START CONTENT -->
+            <div class="content">
+                <div class="simplebox grid740" style="z-index: 720;">
+                    <div class="titleh" style="z-index: 710;">
+                        <h3>搜索</h3>
+                    </div>
+                    <div class="body" style="z-index: 690;">
+
+                        <form id="form2" name="form2" method="post" action="{C('URL')}/index.php?p=admin&m=article&a=showList">
+                            <div class="st-form-line" style="z-index: 680;">
+                                <span class="st-labeltext">标题</span>
+                                <input name="s_title" type="text" class="st-forminput" style="width:510px" value="{$s_title}">
+                                <div class="clear" style="z-index: 670;"></div>
+                            </div>
+                            <div class="st-form-line" style="z-index: 680;">
+                                <span class="st-labeltext">发表者</span>
+                                <select class="uniform" name="s_user_id">
+									<option value="0">请选择发表者...</option>
+								{foreach from=$users item='user'}
+									<option value="{$user.id}"{if $s_user_id==$user.id} selected{/if}>{$user.nickname}</option>
+								{/foreach}
+                                    <!-- <option value="15">lisi</option> -->
+                                    <!-- <option value="10">wangwu</option> -->
+                                </select>
+                                <div class="clear" style="z-index: 670;"></div>
+                            </div>
+                            <div class="st-form-line" style="z-index: 640;">
+                                <span class="st-labeltext">分类</span>
+                                <select class="uniform" name="s_cat_id">
+									<option value="0">任意</option>
+									{foreach from=$cats item='cat'}
+                                    <option value="{$cat.id}"{if $s_cat_id==$cat.id} selected{/if}>{str_repeat('--- --- ', $cat.space)}{$cat.name}</option>
+									{/foreach}
+                                    <!-- <option value="5">----IT</option> -->
+                                    <!-- <option value="6">----生物</option> -->
+                                    <!-- <option value="7">--------鸟类</option> -->
+                                    <!-- <option value="2">武侠</option> -->
+                                    <!-- <option value="3">旅游</option> -->
+                                    <!-- <option value="4">美食</option> -->
+                                    <!-- <option value="8">----湘菜</option> -->
+                                    <!-- <option value="11">--------跳跳蛙</option> -->
+                                    <!-- <option value="12">--------口味虾</option> -->
+                                    <!-- <option value="13">--------臭豆腐</option> -->
+                                    <!-- <option value="9">----粤菜</option> -->
+                                    <!-- <option value="14">--------白切鸡</option> -->
+                                    <!-- <option value="15">--------隆江猪脚</option> -->
+                                    <!-- <option value="10">----川菜</option> -->
+                                </select>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="button-box" style="z-index: 460;">
+                                <input type="submit" name="button" id="button" value="提交" class="st-button">
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- START TABLE -->
+                <div class="simplebox grid740">
+
+                    <div class="titleh">
+                        <h3>博文列表</h3>
+                    </div>
+
+                    <table id="myTable" class="tablesorter">
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>#ID</th>
+                            <th>分类名</th>
+                            <th>标题</th>
+                            <th>发布日期</th>
+                            <th>评论数量</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+						{foreach from=$articles item='article' key='article_key'}
+						<tr>
+                            <td>{$firstNum+$article_key}</td>
+                            <td>{$article.id}</td>
+                            <td>{$article.cat_name}</td>
+                            <td>{$article.title}</td>
+                            <td>{date('Y-m-d H:i:s', $article.post_date)}</td>
+                            <td>{$article.comment_num}</td>
+                            <td>
+								 <a href="{C('URL')}/index.php?p=admin&m=article&a=showUpd&id={$article.id}" >编辑</a>
+                                <a href="#" onClick="return confirm('是否确认删除文章：口味蛙？');">删除</a>
+                            </td>
+                        </tr>
+						{/foreach}
+						                        <!-- <tr> -->
+                            <!-- <td>2</td> -->
+                            <!-- <td>口味蛙</td> -->
+                            <!-- <td>剁椒鱼头</td> -->
+                            <!-- <td>2017-03-27</td> -->
+                            <!-- <td>12</td> -->
+                            <!-- <td>100</td> -->
+                            <!-- <td> -->
+								 <!-- <a href="#" >编辑</a> -->
+                                <!-- <a href="#" onClick="return confirm('是否确认删除文章：口味蛙？');">删除</a> -->
+                            <!-- </td> -->
+                        <!-- </tr> -->
+						                        <!-- <tr> -->
+                            <!-- <td>3</td> -->
+                            <!-- <td>口味蛙</td> -->
+                            <!-- <td>萝卜炖牛腩</td> -->
+                            <!-- <td>2017-03-27</td> -->
+                            <!-- <td>12</td> -->
+                            <!-- <td>100</td> -->
+                            <!-- <td> -->
+								 <!-- <a href="#" >编辑</a> -->
+                                <!-- <a href="#" onClick="return confirm('是否确认删除文章：口味蛙？');">删除</a> -->
+                            <!-- </td> -->
+                        <!-- </tr> -->
+                        </tbody>
+                    </table>
+                    <ul class="pagination">
+						{$pageHtml}
+                         <!-- <li><a href='#'>1</a></li> -->
+						 <!-- <li><a href='#'>2</a></li> -->
+						 <!-- <li><a href='#'>3</a></li> -->
+						 <!-- <li><a href='#'>4</a></li> -->
+						 <!-- <li><a href='#'>下一页</a></li> -->
+                    </ul>
+                </div>
+                <!-- END TABLE -->
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END PAGE -->
+        <div class="clear"></div>
+    </div>
+    <!-- END MAIN -->
+
+    <!-- START FOOTER -->
+    <div id="footer">
+    	<div class="left-column">© Copyright 2016 - 保留所有权利.</div>
+    </div>
+    <!-- END FOOTER -->
+</div>
+</body>
+</html>

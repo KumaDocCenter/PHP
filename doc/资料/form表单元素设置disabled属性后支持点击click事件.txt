@@ -1,0 +1,9 @@
+form表单元素设置disabled属性后支持点击click事件
+
+<label onclick="alert('holle world')">
+	<input type="checkbox" disabled style="pointer-events:none">
+</label>
+
+在disabled元素外面包一层，可以是label，也可以是其它的元素，然后把事件写在外层元素上，
+并把disabled元素样式设置成”pointer-events:none”，这个样式是让元素忽略鼠标事件，
+让点击直接穿透到下一层元素去，然而就触发到label上的点击事件了

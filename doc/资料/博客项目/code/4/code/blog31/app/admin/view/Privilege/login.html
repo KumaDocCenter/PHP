@@ -1,0 +1,28 @@
+{include file='Common/head.html'}
+<body>
+    <div class="loginform">
+    	<div class="title"> <span class="logo-text font18">博客后台管理系统</span></div>
+        <div class="body">
+       	  <form id="form1" name="form1" method="post" action="{C('URL')}/index.php?p=admin&m=login&a=loginh">
+          	<label class="log-lab">帐号</label>
+            <input name="acc" type="text" class="login-input-user" id="textfield" value=""/>
+          	<label class="log-lab">密码</label>
+            <input name="pwd" type="password" class="login-input-pass" id="textfield" value=""/>
+			<label class="log-lab">验证码</label>
+			<div class="padding-bottom5"><img id='img' src="{C('URL')}/index.php?p=admin&m=login&a=captcha" width="220" height="80"></div>
+			<input name="captcha" type="text" class="login-input" id="textfield" value=""/>
+			<label class="log-lab"><input type="checkbox" name="rememberMe" class="uniform" value="yes"> 7天内自动登录</label>
+            <input type="submit" name="button" id="button" value="登录" class="button"/>
+<script type="text/javascript">
+document.getElementById('img').onclick = function (){
+
+	this.src = "{C('URL')}/index.php?p=admin&m=login&a=captcha&randnum="+Math.random();
+}
+</script>
+
+       	  </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

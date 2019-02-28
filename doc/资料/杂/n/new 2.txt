@@ -1,0 +1,79 @@
+错误信息：$this引用没有上下文
+原因：在PHP5中，static声明的静态方法里不可以使用$this 需要使用self来引用当前类中的方法或是变量。
+class record {
+  
+    
+     public static function exec($smarty) {    
+        
+        $ttr=self::getres();
+        $smarty->assign("arr",$ttr);      
+        $smarty->display ( 'rec_mgr.html' );
+    }
+   function getres(){
+      $arr = array (  
+       "1" => 'test',  
+       '2' => 'me',  
+       array (  
+        "3" => "beij",  
+        "4" => "zz"  
+       ),  
+       array (  
+        "5",  
+        "6" => "ewrwer",  
+        "7" => "ssss"  
+       )  
+      );  
+      return $arr;
+    }
+}
+record::exec($smarty);
+
+
+------------------------------------
+//$abonnes
+Array (   
+ [plugins:] => Array ( [0] => admin digest 1500645598 )  //$abonnes[$page]
+ [test:] => Array ( [0] => admin list 1500645560 ) 
+ [test:test2] => Array ( [0] => admin every 1500640768 ) 
+ ) 
+ 
+Array ( 
+ [plugins:] => Array ( [0] => admin digest 1500645598 ) //$abonnes[$page]
+ [test:] => Array ( [0] => admin list 1500645560 ) 
+ [test:test2] => Array ( [0] => admin every 1500640768 ) 
+) 
+
+Array ( 
+ [plugins:] => Array ( [0] => admin digest 1500645598 ) //$abonnes[$page]
+ [test:] => Array ( [0] => admin list 1500645560 ) 
+ [test:test2] => Array ( [0] => admin every 1500640768 ) 
+)
+
+...
+...
+...
+--------------------------------------
+// $userinfo
+Array ( 
+[0] => admin
+[1] => digest
+[2] => 1500645598 
+)
+Array ( 
+[0] => admin
+[1] => digest
+[2] => 1500645598 
+)
+Array ( 
+[0] => aa
+[1] => digest
+[2] => 1500645598 
+)
+...
+...
+...
+
+--------------------------------------
+every 对每次更改发送邮件
+digest 对每个页面发送更改的摘要邮件（每 1.00 天）
+list 自上封邮件以来更改的页面的列表（每 1.00 天）

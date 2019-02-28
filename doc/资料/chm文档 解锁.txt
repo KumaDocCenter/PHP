@@ -1,0 +1,6 @@
+
+【chm文档 解锁】
+
+Windows用户注意：如果您在Windows XP SP2或更高版本下使用Microsoft Internet Explorer，并且要以CHM格式下载文档，
+则应在下载文件后“解除阻止”，方法是右键单击文件并选择属性菜单项。
+然后点击“解锁”按钮。由于Microsoft错误，未能这样做可能会导致文件可视化中的错误。
