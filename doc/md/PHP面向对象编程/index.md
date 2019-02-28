@@ -1,3 +1,15 @@
+---
+title: index
+date: 2019-02-28 12:36:17
+updated: 2019-02-28 12:36:17 
+mathjax: false
+categories: 
+tags:
+typora-root-url: index
+typora-copy-images-to: index
+top: 1
+---
+
 ## PHP面向对象编程
 
 * [面向对象编程相关概念](面向对象1.md)
