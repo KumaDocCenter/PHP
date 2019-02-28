@@ -1,3 +1,16 @@
+---
+title: PhalApi框架
+date: 2019-02-28 12:36:17
+updated: 2019-02-28 12:36:17 
+mathjax: false
+categories: 
+tags:
+typora-root-url: PhalApi框架
+typora-copy-images-to: PhalApi框架
+top: 1
+---
+
+
 # π框架简介
 
 在我们做小程序应用或者是一些前后端完全分离的项目里面（或者做一个单页应用、SPA ：signal page application），一般我们后端PHP程序员都需要编写好相关的接口，同时还要写好相应的接口文档，以供前端的开发人员或者其他的项目团队进行使用。
@@ -44,7 +57,7 @@
 
 **官网**：<https://www.phalapi.net/>
 
-![img](assets/wps328D.tmp.jpg) 
+![img](wps328D.tmp.jpg) 
 
  
 
@@ -52,31 +65,31 @@
 
 ## 版本介绍
 
-![img](assets/wps329E.tmp.jpg) 
+![img](wps329E.tmp.jpg) 
 
  
 
 ## 在线体验
 
-![img](assets/wps329F.tmp.jpg) 
+![img](wps329F.tmp.jpg) 
 
  
 
 ## 亮点
 
-![img](assets/wps32B0.tmp.jpg) 
+![img](wps32B0.tmp.jpg) 
 
  
 
 ## 第三方集成
 
-![img](assets/wps32B1.tmp.jpg) 
+![img](wps32B1.tmp.jpg) 
 
  
 
 ## SDK
 
-![img](assets/wps32C1.tmp.jpg) 
+![img](wps32C1.tmp.jpg) 
 
  
 
@@ -84,7 +97,7 @@
 
 ## 查看
 
-![img](assets/wps32C2.tmp.jpg) 
+![img](wps32C2.tmp.jpg) 
 
  
 
@@ -108,25 +121,25 @@
 
 2. 安装后的目录结构，`public` 为站点根目录
 
-![img](assets/wps32D4.tmp.jpg) 
+![img](wps32D4.tmp.jpg) 
 
  
 
 3. 配置一个虚拟主机
 
-![img](assets/wps32E4.tmp.jpg) 
+![img](wps32E4.tmp.jpg) 
 
  
 
 4. 配置hosts文件
 
-![img](assets/wps32F5.tmp.jpg) 
+![img](wps32F5.tmp.jpg) 
 
  
 
 5. 浏览器访问效果
 
-![img](assets/wps32F6.tmp.jpg) 
+![img](wps32F6.tmp.jpg) 
 
  
 
@@ -136,21 +149,21 @@
 
 ## public目录
 
-![img](assets/wps3307.tmp.jpg) 
+![img](wps3307.tmp.jpg) 
 
 ## config目录
 
-![img](assets/wps3308.tmp.jpg) 
+![img](wps3308.tmp.jpg) 
 
  
 
 ## APP目录
 
-![img](assets/wps3318.tmp.jpg) 
+![img](wps3318.tmp.jpg) 
 
 ## 源码
 
-![img](assets/wps3319.tmp.jpg) 
+![img](wps3319.tmp.jpg) 
 
  
 
@@ -158,13 +171,13 @@
 
 文档： [运行Hello World >> 访问一个接口](http://docs.phalapi.net/#/v2.0/hello-world?id=%e8%ae%bf%e9%97%ae%e4%b8%80%e4%b8%aa%e6%8e%a5%e5%8f%a3)
 
-![img](assets/wps331A.tmp.jpg) 
+![img](wps331A.tmp.jpg) 
 
  
 
 1. 在地址栏进行url访问
 
-![img](assets/wps332B.tmp.jpg) 
+![img](wps332B.tmp.jpg) 
 
 ​	访问规则：`域名?s=App.控制器名称.方法名称&key=value&key2=value2....`
 
@@ -172,13 +185,13 @@
 
 2. 对应的控制器和方法
 
-   ![1538487671539](assets/1538487671539.png)
+   ![1538487671539](1538487671539.png)
 
 
 
 3. 效果
 
-![img](assets/wps333D.tmp.jpg) 
+![img](wps333D.tmp.jpg) 
 
 # 访问参数验证
 
@@ -220,7 +233,7 @@ public function getRules() {
 }
 ```
 
-![1538487002273](assets/1538487002273.png)
+![1538487002273](1538487002273.png)
 
 
 
@@ -256,25 +269,25 @@ public function getRules() {
 
 1. 在方法前面编写注释
 
-   ![1538490748083](assets/1538490748083.png)
+   ![1538490748083](1538490748083.png)
 
     
 
 2. 通过 域名/docs.php 方式访问在线文档
 
-![img](assets/wps334F.tmp.jpg) 
+![img](wps334F.tmp.jpg) 
 
  
 
 3. 点击展开
 
-![img](assets/wps3360.tmp.jpg) 
+![img](wps3360.tmp.jpg) 
 
  
 
 4. 详情查看
 
-![img](assets/wps3370.tmp.jpg) 
+![img](wps3370.tmp.jpg) 
 
  
 
@@ -304,17 +317,17 @@ Usage:
 
 1. 执行如下的命令
 
-![img](assets/wps3371.tmp.jpg) 
+![img](wps3371.tmp.jpg) 
 
 2. 目录查看
 
-![img](assets/wps3382.tmp.jpg) 
+![img](wps3382.tmp.jpg) 
 
  
 
 3. 访问 `域名/docs/`
 
-![img](assets/wps3383.tmp.jpg) 
+![img](wps3383.tmp.jpg) 
 
  
 
@@ -330,7 +343,7 @@ Usage:
 
 ## 数据库配置
 
-![1538491512850](assets/1538491512850.png)
+![1538491512850](1538491512850.png)
 
  
 
@@ -356,13 +369,13 @@ Usage:
 
 在src\app\Model目录下创建一个Movie.php文件
 
-![1538031807649](assets/1538031807649.png)
+![1538031807649](1538031807649.png)
 
 
 
 在src\app\Api\Site.php控制器文件实例化模型，获取数据
 
-![1538033770581](assets/1538033770581.png)
+![1538033770581](1538033770581.png)
 
 
 
@@ -376,7 +389,7 @@ Usage:
 
 需要为小程序提供一个轮播图的接口
 
-![img](assets/wps3396.tmp.jpg) 
+![img](wps3396.tmp.jpg) 
 
 
 
@@ -398,7 +411,7 @@ https://www.swiper.com.cn/usage/index.html
 
 效果：
 
-![1538033370889](assets/1538033370889.png)
+![1538033370889](1538033370889.png)
 
  
 
@@ -436,7 +449,7 @@ https://www.swiper.com.cn/usage/index.html
 | ---- | -------- | ---------- | ------------------------------------------- | ----------- | ----------- | ---- |
 |      | 图片地址 | 关联商品id | 表示轮播图是否上线 1代表上线，0代表没有上线 |             |             |      |
 
-  ![1538033551042](assets/1538033551042.png)
+  ![1538033551042](1538033551042.png)
 
 
 商品表
@@ -445,7 +458,7 @@ https://www.swiper.com.cn/usage/index.html
 | ---- | ---- | ----- | ------ | ---- | ---- | ---- |
 |      |      |       |        |      |      |      |
 
- ![1538034695579](assets/1538034695579.png)
+ ![1538034695579](1538034695579.png)
 
  
 
@@ -457,25 +470,25 @@ https://www.swiper.com.cn/usage/index.html
 
 1. 定义控制器，创建一个getRules方法
 
-![img](assets/wps33C9.tmp.jpg) 
+![img](wps33C9.tmp.jpg) 
 
  
 
 2. 创建一个lst方法
 
-![img](assets/wps33CA.tmp.jpg) 
+![img](wps33CA.tmp.jpg) 
 
  
 
 3. 创建一个transfer方法，用于数据的格式化
 
-![img](assets/wps33CB.tmp.jpg) 
+![img](wps33CB.tmp.jpg) 
 
  
 
 4. 效果
 
-![img](assets/wps33DB.tmp.jpg) 
+![img](wps33DB.tmp.jpg) 
 
  
 
@@ -483,27 +496,27 @@ https://www.swiper.com.cn/usage/index.html
 
 1. 在src/Api/Banner.php控制器文件，创建一个getRules方法
 
-![1538037911505](assets/1538037911505.png)
+![1538037911505](1538037911505.png)
 
 
 2. 在src/Model/Banner.php模型文件，获取轮播图信息
 
-![1538038013908](assets/1538038013908.png)
+![1538038013908](1538038013908.png)
 
 
 3. 在src/Api/Banner.php控制器文件，创建一个lst方法
 
-![1538037932482](assets/1538037932482.png)
+![1538037932482](1538037932482.png)
 
 
 4. 在src/Api/Banner.php控制器文件，创建一个transfer方法，用于数据的格式化
 
-![1538037945803](assets/1538037945803.png)
+![1538037945803](1538037945803.png)
 
 
 5. 效果
 
-![1538038037612](assets/1538038037612.png)
+![1538038037612](1538038037612.png)
 
 
 
@@ -511,7 +524,7 @@ https://www.swiper.com.cn/usage/index.html
 
 在src\app\Api\Goods.php文件编写商品详情接口
 
-![1538038776351](assets/1538038776351.png)
+![1538038776351](1538038776351.png)
 
 ### 详情查看
 
@@ -521,41 +534,41 @@ https://www.swiper.com.cn/usage/index.html
 
 1. 在pages/swiper/swiper.wxml文件为每个轮播项绑定点击事件
 
-   ![1538038628665](assets/1538038628665.png)
+   ![1538038628665](1538038628665.png)
 
 2. 在pages/swiper/swiper.js文件定义回调函数打开一个详情页
 
-   ![1538038647842](assets/1538038647842.png)
+   ![1538038647842](1538038647842.png)
 
 3. 在pages/detail/detail.js文件获取商品主键id，向商品详情接口发送网络请求获取数据
 
-   ![1538038674478](assets/1538038674478.png)
+   ![1538038674478](1538038674478.png)
 
 4. 在pages/detail/detail.wxml页面完成商品展示
 
-   ![1538038716978](assets/1538038716978.png)
+   ![1538038716978](1538038716978.png)
 
 5. 效果
 
-   ![1538038688372](assets/1538038688372.png)
+   ![1538038688372](1538038688372.png)
 
 ## 集成微信小程序
 
 1. 在config/config.js文件定义好url地址常量
 
-   ![1538038334591](assets/1538038334591.png)
+   ![1538038334591](1538038334591.png)
 
 2. 在pages/swiper/swiper.js文件，调用接口获取轮播图信息
 
-   ![1538038397690](assets/1538038397690.png)
+   ![1538038397690](1538038397690.png)
 
 3. 在pages/swiper/swiper.wxml文件完成布局
 
-   ![1538038458458](assets/1538038458458.png)
+   ![1538038458458](1538038458458.png)
 
 4. 效果
 
-   ![1538038482324](assets/1538038482324.png)
+   ![1538038482324](1538038482324.png)
 
 
 
@@ -567,19 +580,19 @@ https://www.swiper.com.cn/usage/index.html
 
 1. 查看系统使用的默认语言包
 
-![img](assets/wps33EC.tmp.jpg) 
+![img](wps33EC.tmp.jpg) 
 
  
 
 2. 配置自己的语言项
 
-![img](assets/wps33ED.tmp.jpg) 
+![img](wps33ED.tmp.jpg) 
 
  
 
 3. 查看语言包函数
 
-![img](assets/wps33FD.tmp.jpg) 
+![img](wps33FD.tmp.jpg) 
 
  
 
@@ -589,22 +602,22 @@ https://www.swiper.com.cn/usage/index.html
 
 1. 自定义异常类
 
-![img](assets/wps33FE.tmp.jpg) 
+![img](wps33FE.tmp.jpg) 
 
  
 
 2. 在轮播图信息为空的时候抛出异常
 
-![img](assets/wps340F.tmp.jpg) 
+![img](wps340F.tmp.jpg) 
 
  
 
 3. 效果
 
-![img](assets/wps3410.tmp.jpg) 
+![img](wps3410.tmp.jpg) 
 
 
 
 ## 小程序如何和PHP交互的？
 
-![1538039794609](assets/1538039794609.png)
+![1538039794609](1538039794609.png)

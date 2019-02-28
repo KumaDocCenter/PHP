@@ -1,3 +1,15 @@
+---
+title: MYSQLI扩展
+date: 2019-02-28 12:36:17
+updated: 2019-02-28 12:36:17 
+mathjax: false
+categories: 
+tags:
+typora-root-url: MYSQLI扩展
+typora-copy-images-to: MYSQLI扩展
+top: 1
+---
+
 
 
 # MYSQLI扩展
@@ -38,27 +50,27 @@ MYSQLI是PHP中的一个==扩展==，扩展的意思即不是默认就自带支�
 > ==步骤==：
 > 第一步，打开PHP的配置文件**php.ini**,去掉php_mysqli.dll前面的注释符号"；"
 >
-> ![1529720270909](img/9.png)
+> ![1529720270909](9.png)
 >
 > 第二步，配置php.ini中的extension_dir配置项，
 >
-> ![1529720394115](img/10.png)
+> ![1529720394115](10.png)
 >
 > 第三步，确认在extension_dir配置的目录中php_mysqli.dll文件是存在的，
 >
-> ![1529720462175](img/11.png)
+> ![1529720462175](11.png)
 >
 > 第四步，重启apache，测试是否开启成功
 >
 > 重启apache成功
 >
-> ![1529720522702](img/12.png)
+> ![1529720522702](12.png)
 >
 > 测试mysqli开启是否成功
 >
 > 在code1.php中构建phpinfo()函数，访问code1.php，查看到如下图所示的mysqli配置项，
 >
-> ![1529720610970](img/13.png)
+> ![1529720610970](13.png)
 >
 > 如果看到上图，则说明mysqli开启配置成功。
 

@@ -1,3 +1,16 @@
+---
+title: PHP变量与常量
+date: 2019-02-28 12:36:17
+updated: 2019-02-28 12:36:17 
+mathjax: false
+categories: 
+tags:
+typora-root-url: imgs
+typora-copy-images-to: imgs
+top: 1
+---
+
+
 # PHP变量与常量
 
 ----
@@ -19,20 +32,20 @@
   * 比如：``$get_user_name``  下划线连接
   * 比如：``$getUserName `` 从第二个单词开始首字母要大写 
 
-![](note/php_variable_constant_01.png) 
+![](php_variable_constant_01.png) 
 
 
 ### 创建或者声明变量(增)
 
-**语法：**   \\\\
+**语法：**   
 ``$变量名 = 值;``
 
  
 
-**注意：**    \\\\
-这里的$符号它不是属于变量名的一部分，它只是一种语法规则而已！   \\\\
-PHP是一种弱类型的语言，在创建变量的时候不需要指明变量的数据类型！   \\\\
-虽然PHP在创建变量的时候不需要指明变量的数据类型， 但是它也是有类型的！它的数据类型是由其值决定的！   \\\\
+**注意：**    
+这里的$符号它不是属于变量名的一部分，它只是一种语法规则而已！   
+PHP是一种弱类型的语言，在创建变量的时候不需要指明变量的数据类型！   
+虽然PHP在创建变量的时候不需要指明变量的数据类型， 但是它也是有类型的！它的数据类型是由其值决定的！   
 
 不能使用没有定义的变量。
 
@@ -57,7 +70,7 @@ $v1=20;  //重新赋值
 echo $v1; // 20
 ```
 
-![](note/php_variable_constant_02.png) 
+![](php_variable_constant_02.png) 
 
 
 
@@ -75,12 +88,12 @@ echo $v1;  //获取变量的值(查)
 
 ### 删除(删)
 
-要删除变量就得使用PHP中的一个内置的系统函数！ \\\\
+要删除变量就得使用PHP中的一个内置的系统函数！ 
 
-``unset(变量名)``   \\\\
+``unset(变量名)``   
 
-使用``unset()``这个函数以后会将变量名与引用给去掉。 \\\\
-但其值是被PHP的垃圾回收机制给销毁！   \\\\
+使用``unset()``这个函数以后会将变量名与引用给去掉。 
+但其值是被PHP的垃圾回收机制给销毁！   
 
 ```php
 <?php
@@ -108,12 +121,12 @@ echo $$v1; // 10
 
 ### 超全局变量
 
-超全局变量也称之为**预定义变量** \\\\
+超全局变量也称之为**预定义变量** 
 
-**预定义变量：**  PHP系统预先定义变量，这几个变量程序员无法创建！只能使用。 \\\\  
-得到的结果都是数组。 \\\\
+**预定义变量：**  PHP系统预先定义变量，这几个变量程序员无法创建！只能使用。   
+得到的结果都是数组。 
 
-![](note/php_variable_constant_04.png)
+![](php_variable_constant_04.png)
 
 下面是一些常用的超全局变量：
 
@@ -125,31 +138,31 @@ echo $$v1; // 10
 
 **$_SERVER[‘SERVER_NAME’]**
 
-![](note/php_variable_constant_05.png)
+![](php_variable_constant_05.png)
 
 
 
 **$_SERVER[‘SERVER_ADDR’]**  
 
-![](note/php_variable_constant_06.png)
+![](php_variable_constant_06.png)
 
 
 
 **$_SERVER[‘REMOTE_ADDR’]**  
 
-![](note/php_variable_constant_07.png)
+![](php_variable_constant_07.png)
 
 
 
 **$_SERVER[‘DOCUMENT_ROOT’]**  
 
-![](note/php_variable_constant_08.png)
+![](php_variable_constant_08.png)
 
 
 
 **$_SERVER[‘SCRIPT_FILENAME’]**
 
-![](note/php_variable_constant_09.png)
+![](php_variable_constant_09.png)
 
 
 
@@ -157,7 +170,7 @@ echo $$v1; // 10
 
 **作用：**获取到表单以get方式提交的数据或者是用户模拟get方式提交的数据！ 
 
-![](note/php_variable_constant_10.png)
+![](php_variable_constant_10.png)
 
 **注意：**
 1. 如果我们需要将表单中数据发送给PHP来进行处理，那么就需要给当前的表单控件标签设置name属性值 。
@@ -169,7 +182,7 @@ echo $$v1; // 10
 
 模拟get请求
 
-![](note/php_variable_constant_11.png)
+![](php_variable_constant_11.png)
 
 
 
@@ -177,17 +190,17 @@ echo $$v1; // 10
 
 **作用：**获取到表单以POST方式提交的数据！ 
 
-![](note/php_variable_constant_12.png)
+![](php_variable_constant_12.png)
 
 
 
 #### $_REQUEST
 
-**$_REQUEST = $_POST +$_GET**      \\\\
+**$_REQUEST = $_POST +$_GET**      
 
 **作用**：它可以获取表单以post方式提交的数据，也可以获取到表单以get方式提交的数据。 
 
-![](note/php_variable_constant_13.png)
+![](php_variable_constant_13.png)
 
 
 
@@ -197,8 +210,8 @@ echo $$v1; // 10
 
 ## 常量
 
-**什么是常量？**   \\\\
-常量一旦被定义就不能修改和删除！这个数据是一直是固定的！常量的值是存放全局数据区的常量区中！  \\\\
+**什么是常量？**   
+常量一旦被定义就不能修改和删除！这个数据是一直是固定的！常量的值是存放全局数据区的常量区中！  
 
 在一个PHP文件中，常量 的值永远是固定的！它不会发生改变！
 
@@ -223,10 +236,10 @@ echo constant('^_^');  //输出：aaa
 
 ### 定义常量
 
-**语法：**  \\\\
-``define("常量名",常量的值);``  \\\\
+**语法：**  
+``define("常量名",常量的值);``  
 
-在新版的PHP中， 可以使用const 这个关键字来定义常量，  const这个关键字它本身是用来定义类常量。  \\\\
+在新版的PHP中， 可以使用const 这个关键字来定义常量，  const这个关键字它本身是用来定义类常量。  
 
 ``const 常量名 = 值; ``
 
@@ -266,13 +279,13 @@ Array(
 
 ### 检测常量是否被定义
 
-要使用一个PHP中的内置函数来测试常量是否定义。  \\\\ 
+要使用一个PHP中的内置函数来测试常量是否定义。   
 
 ``bool defined (string $name)``
 
  
 
-``bool ``   ：指的函数的返回值 。 如果该常量已经定义就得到一个**true** ， 如果该常量没有定义就会得到一个**false**。   \\\\ 
+``bool ``   ：指的函数的返回值 。 如果该常量已经定义就得到一个**true** ， 如果该常量没有定义就会得到一个**false**。    
 
 ``string $name ``  ：字符串 要求是常量名。也就是说在defined这个函数里面写常量名需要加引号。 
 
@@ -285,9 +298,9 @@ var_dump(defined('PI'));    //bool(true)
 
 ### 常量名的大小写
 
-一般情况下常量名肯定是区分大小写的 ，可以通过第三个参数来开启不区分大小写。 \\\\
+一般情况下常量名肯定是区分大小写的 ，可以通过第三个参数来开启不区分大小写。 
 
-``bool define (常量名, 常量值 [, bool $case_insensitive = false ] );``  \\\\
+``bool define (常量名, 常量值 [, bool $case_insensitive = false ] );``  
 
 关于第三个参数： 
 
@@ -308,7 +321,7 @@ var_dump(defined('PI'));    //bool(true)
 * **PHP_INT_MAX** ：输出PHP中最大的整型数据
 * **PHP_INT_SIZE**     ：输出PHP中整型的所占用的字节数
 
-![](note/php_variable_constant_14.png)
+![](php_variable_constant_14.png)
 
 ----
 
@@ -316,10 +329,10 @@ var_dump(defined('PI'));    //bool(true)
 
 ### 魔术常量
 
-使用的语法和常量是一样的，而且也是预定义的，但是其值是由其所在的位置决定的，可能出现很多的值！  \\\\
+使用的语法和常量是一样的，而且也是预定义的，但是其值是由其所在的位置决定的，可能出现很多的值！  
 
 
-**注意：左右两边各有两个下划线**    \\\\
+**注意：左右两边各有两个下划线**    
 
 一些常用的魔术常量：  
 
@@ -331,7 +344,7 @@ var_dump(defined('PI'));    //bool(true)
 * ``__CLASS__``   **当前的类的名字**
 * ``__METHOD__``  **当前方法的名字**
 
-![](note/php_variable_constant_15.png)
+![](php_variable_constant_15.png)
 
 ----
 
@@ -347,7 +360,7 @@ var_dump(defined('PI'));    //bool(true)
 
 将一个变量的值赋值给另外一个变量，然后修改其中一个变量的值，并**不会影响**到另外一个变量 。这两个变量之间是没有联系的！
 
-![](note/php_variable_constant_16.png)
+![](php_variable_constant_16.png)
 
  
 
@@ -357,9 +370,9 @@ var_dump(defined('PI'));    //bool(true)
 
 **答**：不会影响到$v2这个变量  
 
-![](note/php_variable_constant_17.png)
+![](php_variable_constant_17.png)
 
-![](note/php_variable_constant_18.png)
+![](php_variable_constant_18.png)
 
  
 
@@ -367,12 +380,12 @@ var_dump(defined('PI'));    //bool(true)
 
 ### 按引用传递
 
-将一个变量的内存地址赋值给另外一个变量，然后修改一个变量的值 ，它**会影响**到另外一个变量的值。这两个变量之间是有联系的！ \\\\
+将一个变量的内存地址赋值给另外一个变量，然后修改一个变量的值 ，它**会影响**到另外一个变量的值。这两个变量之间是有联系的！ 
 
 
 在PHP中是通过一个&(求地址运算符)得到一个变量的值内存地址。
 
-![](note/php_variable_constant_19.png)
+![](php_variable_constant_19.png)
 
  
 
@@ -385,7 +398,7 @@ var_dump(defined('PI'));    //bool(true)
 
 **答**  ：不会影响到另外一个变量。因为unset这个函数它只是将变量名与引用给销毁，变量的值还在。
 
-![](note/php_variable_constant_20.png)
+![](php_variable_constant_20.png)
 
 
 
@@ -395,7 +408,7 @@ var_dump(defined('PI'));    //bool(true)
 
 ## 变量的数据类型
 
-**PHP中有八种数据类型：**  \\\\
+**PHP中有八种数据类型：**  
 
 整型、浮点型、布尔型、字符串型、数组、对象、资源、NULL 
 
@@ -403,7 +416,7 @@ var_dump(defined('PI'));    //bool(true)
 
 ### 标量数据类型(基本数据类型)
 
-特点：只能存储一个值！  \\\\
+特点：只能存储一个值！  
 
 **整型、浮点型、布尔型、字符串型**
 
@@ -411,12 +424,12 @@ var_dump(defined('PI'));    //bool(true)
 
 #### 整型 int 或者integer
 
-``PHP_INT_SIZE``：表示整型的字节数   \\\\
-``PHP_INT_MAX``：表示整型的最大数   \\\\
+``PHP_INT_SIZE``：表示整型的字节数   
+``PHP_INT_MAX``：表示整型的最大数   
 
 
-整型在内存中是使用是**二进制**的方式来表示的！  \\\\
-4个字节共表示32位！但是最高位表示符号位。如果最高位是0表示正数，如果1表示负数！  \\\\
+整型在内存中是使用是**二进制**的方式来表示的！  
+4个字节共表示32位！但是最高位表示符号位。如果最高位是0表示正数，如果1表示负数！  
 
 
 在PHP中定义整型数据可以使用四种方式来表示：   \\\
@@ -431,21 +444,21 @@ var_dump(defined('PI'));    //bool(true)
 答：不会，会自动将这个数转换为浮点型数据。
 
 
-\\\\
+
 
 
 #### 浮点数 float或者double
 
-其实浮点数是分为单精度与双精度之分 只是PHP没有作这个区分！  \\\\
-浮点数使用8个字节来表示   \\\\
+其实浮点数是分为单精度与双精度之分 只是PHP没有作这个区分！  
+浮点数使用8个字节来表示   
 
-**单精度**与**双精度**   \\\\
+**单精度**与**双精度**   
 
-浮点数有两种表示的方式：  \\\\
-``小数、指数``  \\\\
+浮点数有两种表示的方式：  
+``小数、指数``  
 
-小数：``12.38``    \\\\
-指数：7e3 ---> 7*10^3   \\\\
+小数：``12.38``    
+指数：7e3 ---> 7*10^3   
 
 
 如果是使用指数来表示：
@@ -453,7 +466,7 @@ var_dump(defined('PI'));    //bool(true)
 * e后面必须是整数 
 
 
-浮点数的字长和平台相关，尽管通常最大值是 1.8e308 并具有 14 位十进制数字的精度（64 位 IEEE 格式）。   \\\\
+浮点数的字长和平台相关，尽管通常最大值是 1.8e308 并具有 14 位十进制数字的精度（64 位 IEEE 格式）。   
 
 ```php
 <?php
@@ -466,20 +479,20 @@ $v2=7e3;
 var_dump($v2); //7*10^3
 ```
 
-**注意：**最好不要使用浮点数来进行比较！   \\\\
+**注意：**最好不要使用浮点数来进行比较！   
 
-因为计算机只能识别二进制数，需要将0.3转换为二进制数， 乘2取整法   \\\\
+因为计算机只能识别二进制数，需要将0.3转换为二进制数， 乘2取整法   
 因此小数在转换为二进制的时候会丢失精度！
 
-\\\\
+
 
 #### 布尔型 bool或boolean
 
-布尔型常用表示**真**与**假**！  \\\\
+布尔型常用表示**真**与**假**！  
 
 布尔型只有两个值：``true``和``false `` ，并且这两个单词不区分大小写！  \\\
 
-**要打印布尔型的结果，不能使用 echo 输出，必须使用``var_dump``语句来打印。** \\\\
+**要打印布尔型的结果，不能使用 echo 输出，必须使用``var_dump``语句来打印。** 
 
 布尔类型一般多用于比较
 ```php
@@ -491,7 +504,7 @@ var_dump($flag);  //false
 
 
 
-\\\\
+
 
 #### 字符串数据类型 string
 
@@ -551,13 +564,13 @@ $res="姓名 $name ";
 $res="姓名{$name}";   
 ```
 
-![](note/php_variable_constant_21.png)
+![](php_variable_constant_21.png)
 
 
 
 ##### heredoc 
 
-定界符，就是让用户自己定义字符串的边界！  \\\\
+定界符，就是让用户自己定义字符串的边界！  
 
 适用于定义复杂的、多行的字符串，因为字符串的边界是可以由自己随便定义的，所以可以人为的保证边界和字符串的内部不会发生冲突！
 
@@ -611,7 +624,7 @@ doc;
 
 ### 复合数据类型
 
-特点：复合数据类型可以存储多个值！ \\\\ 
+特点：复合数据类型可以存储多个值！  
 
 **数组、对象**
 
@@ -630,7 +643,7 @@ doc;
 
 #### 资源 resource
 
-凡是PHP操作的外部数据，得到的都是资源数据类型！   \\\\
+凡是PHP操作的外部数据，得到的都是资源数据类型！   
 
 
 
@@ -647,7 +660,7 @@ var_dump($fp);  // resource(3) of type(stream)
 
 
 
-\\\\
+
 
 #### 空 Null
 
@@ -658,7 +671,7 @@ var_dump($fp);  // resource(3) of type(stream)
 * 将一个变量unset掉
 * 调用一个没有返回值的函数 
 
-![](note/php_variable_constant_22.png)
+![](php_variable_constant_22.png)
 
 ----
 
@@ -666,13 +679,13 @@ var_dump($fp);  // resource(3) of type(stream)
 
 ## 变量数据类型的转换 
 
-变量会根据上下文的环境，数据类型可以会做相应转换！   \\\\
+变量会根据上下文的环境，数据类型可以会做相应转换！   
 
-分为：**自动转换** 、**强制转换**   \\\\
+分为：**自动转换** 、**强制转换**   
 
 
 
-**注意： **   \\\\
+**注意： **   
 
 不管是自动转换还是强制转换，变量数据类型转换的结果都是相同的！
 
@@ -698,7 +711,7 @@ if($flag){
 
 ### 强制类型转换
 
-使用PHP中的系统内置函数，将一个变量的数据类型强制的转换为另外一个数据类型！  \\\\
+使用PHP中的系统内置函数，将一个变量的数据类型强制的转换为另外一个数据类型！  
 
 **语法：**  
 
@@ -734,7 +747,7 @@ if($flag){
 | null                                      |       0        |
 | float                                     |      取整      |
 
-![](note/php_variable_constant_23.png)
+![](php_variable_constant_23.png)
 
 
 
@@ -742,7 +755,7 @@ if($flag){
 
 ``(float)变量名``
 
-![](note/php_variable_constant_24.png)
+![](php_variable_constant_24.png)
 
 
 
@@ -750,14 +763,14 @@ if($flag){
 
 ``(bool)变量名``
 
-![](note/php_variable_constant_25.png)
+![](php_variable_constant_25.png)
 
 
 
 
 #### 将其它的数据类型为数组
 
-``(Array)变量名``   \\\\
+``(Array)变量名``   
 
 **注意：** 在工作中这种方法几乎不会使用。
 
@@ -785,7 +798,7 @@ string  gettype ( mixed $var );
 ```
 获取到变量的数据类型
 
-![](note/php_variable_constant_26.png)
+![](php_variable_constant_26.png)
 
  
 
@@ -800,7 +813,7 @@ bool settype ( mixed &$var , string $type );
 * mixed  &$var：要设置的变量
 * string $type：将变量设置为什么类型
 
-![](note/php_variable_constant_27.png)
+![](php_variable_constant_27.png)
 
 
 
@@ -811,14 +824,14 @@ bool  isset(mixed $var1[,mixed $var2]);
 ```
 **作用**：判断一个变量是否存在，存在就返回**true**，不存在就返回**false**
 
-\\\\
+
 
 变量不存在有三种情况：
 1. 变量未被声明（没有被初始化）
 2. 变量被unset掉了
 3. 变量的值如果为NULL，也认为不存在！
 
-![](note/php_variable_constant_28.png)
+![](php_variable_constant_28.png)
 
 
 
@@ -883,7 +896,7 @@ bool  is_numeric ( mixed $var );
 ```
 **作用**：检测变量是否为数字或数字字符串，如果 $var 是数字和数字字符串则返回 TRUE，否则返回 FALSE。
 
-![](note/php_variable_constant_29.png)
+![](php_variable_constant_29.png)
 
 ----
 

@@ -1,3 +1,15 @@
+---
+title: PDO与异常
+date: 2019-02-28 12:36:17
+updated: 2019-02-28 12:36:17 
+mathjax: false
+categories: 
+tags:
+typora-root-url: PDO与异常
+typora-copy-images-to: PDO与异常
+top: 1
+---
+
 
 
 # PDO与异常
@@ -22,7 +34,7 @@ ORACLE：oci_connect
 
 所以，当我们要切换数据库时，就必须更换为相应扩展的操作函数
 
-![1530715856586](./img/2.png)
+![1530715856586](2.png)
 
 
 
@@ -32,7 +44,7 @@ ORACLE：oci_connect
 
 然而PDO却给我们提供了一个方便的操作方式，我们不再需要学习市面上各种各样的数据库操作，只需要学会使用PDO，那么就可以通过PDO来达到使用相同的操作方法，改变个别参数值，就能达到操作不同类型数据库的目的。
 
-![1530716189186](./img/3.png)
+![1530716189186](3.png)
 
 ### 什么是PDO
 
@@ -44,7 +56,7 @@ PDO：PHP Data Object  即 PHP数据==对象==
 
 PDO在手册中的位置：
 
-![1530716434955](./img/4.png)
+![1530716434955](4.png)
 
 
 
@@ -54,23 +66,23 @@ PDO在手册中的位置：
 
 第一步，打开php.ini配置文件，确认extension_dir配置项是否正确，
 
-![1530756520292](img/8.png)
+![1530756520292](8.png)
 
 第二步，开启php_pdo_mysql.dll扩展配置项，
 
-![1530756573703](img/9.png)
+![1530756573703](9.png)
 
 第三步，确认在extension_dir所配置的目录下存在php_pdo_mysql.dll文件，
 
-![1530756626328](img/10.png)
+![1530756626328](10.png)
 
 第四步，重启apache，查看pdo_mysql确实开启成功。
 
-![1530756731411](img/11.png)
+![1530756731411](11.png)
 
 通过phpinfo查看扩展是否开启成功，如下图所示，说明开启成功。
 
-![1530756776669](img/12.png)
+![1530756776669](12.png)
 
 
 
@@ -105,7 +117,7 @@ var_dump( $pdo );
 
 访问code2.php，效果为
 
-![1530757386020](img/13.png)
+![1530757386020](13.png)
 
 
 
@@ -218,7 +230,7 @@ var_dump( $row );
 
 访问code4.php的效果：
 
-![1530759404874](img/14.png)
+![1530759404874](14.png)
 
 **==解答1小结==**：
 
@@ -236,7 +248,7 @@ var_dump( $row );
 
    ​         类常量**PDO::FETCH_OBJ**      解析对象类型的数组数据
 
-   ![1530760743075](img/15.png)
+   ![1530760743075](15.png)
 
 
 
@@ -261,7 +273,7 @@ var_dump( $rows );
 
 **==解答2小结==**：
 
-![1530761077197](img/16.png)
+![1530761077197](16.png)
 
 
 
@@ -283,7 +295,7 @@ var_dump( $rowCount );
 
 **==解答3小结==**：
 
-![1530761258058](img/17.png)
+![1530761258058](17.png)
 
 
 
@@ -307,7 +319,7 @@ var_dump( $colCount );
 
 **==解答4小结==**：
 
-![1530761526517](img/18.png)
+![1530761526517](18.png)
 
 **==解答5==**：构建名为code10.php的文件，代码如下：
 
@@ -327,7 +339,7 @@ var_dump( $row );
 
 **==解答5小结==**：
 
-![1530761739365](img/19.png)
+![1530761739365](19.png)
 
 
 
@@ -376,7 +388,7 @@ insert into user values (null, 'lisi', 1000);
 
 1. 开启事务，固定的操作语句：**==start transaction;==**
 
-   ![1530762517800](img/20.png)
+   ![1530762517800](20.png)
 
 2. 执行如下所示的SQL语句，使lisi减少100块
 
@@ -384,7 +396,7 @@ insert into user values (null, 'lisi', 1000);
    update user set money=money-100 where name='lisi';
    ```
 
-   ![1530762723944](img/21.png)
+   ![1530762723944](21.png)
 
 3. 执行如下所示SQL语句，使zhangsan增加100块
 
@@ -392,10 +404,10 @@ insert into user values (null, 'lisi', 1000);
    update user set money=money+100 where name='zhangsan';
    ```
 
-   ![1530762838369](img/22.png)
+   ![1530762838369](22.png)
 
 4. 将完整的事务整体提交一次，提交事务的语句：**==commit;==**
-   ![1530763027364](img/23.png)
+   ![1530763027364](23.png)
 
 
 
@@ -421,11 +433,11 @@ insert into user values (null, 'lisi', 1000);
    update user set money=money+100 where name='zhangsan';
    ```
 
-   ![1530763367392](img/24.png)
+   ![1530763367392](24.png)
 
 3. 假设现在虽然执行成功了两个子过程，但是因为某些特殊的原因，要求撤销这个完整的操作，使操作不生效，所以，我们需要执行回滚操作，回滚操作的语句：**==rollback;==**
 
-   ![1530763547676](img/25.png)
+   ![1530763547676](25.png)
 
 
 
@@ -490,9 +502,9 @@ if( $flag ){//表示子过程完全没有问题
 
 访问code12.php效果为：
 
-![1530775608835](img/26.png)
+![1530775608835](26.png)
 
-![1530775651617](img/27.png)
+![1530775651617](27.png)
 
 
 
@@ -558,7 +570,7 @@ insert into cz_user values (null, 'zhaoliu', 'dd');
    prepare p1 from "select * from cz_user";
    ```
 
-   ![1530777591251](img/28.png)
+   ![1530777591251](28.png)
 
 2. 执行预处理语句，
 
@@ -566,7 +578,7 @@ insert into cz_user values (null, 'zhaoliu', 'dd');
    execute p1;
    ```
 
-   ![1530777790476](img/29.png)
+   ![1530777790476](29.png)
 
 3. 删除预处理语句
 
@@ -574,7 +586,7 @@ insert into cz_user values (null, 'zhaoliu', 'dd');
    drop prepare p1;
    ```
 
-   ![1530777850402](img/30.png)
+   ![1530777850402](30.png)
 
 
 
@@ -611,7 +623,7 @@ insert into cz_user values (null, 'zhaoliu', 'dd');
    prepare p1 from "insert into cz_user values (null, ?, ?)";
    ```
 
-   ![1530778196962](img/31.png)
+   ![1530778196962](31.png)
 
 2. 执行预处理语句，
 
@@ -623,7 +635,7 @@ insert into cz_user values (null, 'zhaoliu', 'dd');
    set @bb='123456';
    ```
 
-   ![1530778373108](img/32.png)
+   ![1530778373108](32.png)
 
    使用准备的数据执行预处理语句：
 
@@ -631,7 +643,7 @@ insert into cz_user values (null, 'zhaoliu', 'dd');
    execute p1 using @aa, @bb;
    ```
 
-   ![1530778688372](img/33.png)
+   ![1530778688372](33.png)
 
 3. 删除预处理语句
 
@@ -698,7 +710,7 @@ echo '执行预处理完毕';
 
 访问code13.php的效果：
 
-![1530779980684](img/34.png)
+![1530779980684](34.png)
 
 ==**小结1**==：
 
@@ -737,7 +749,7 @@ echo '执行预处理完毕';
 
 访问code14.php的效果：
 
-![1530781215060](img/35.png)
+![1530781215060](35.png)
 
 ==**小结2**==：
 
@@ -774,7 +786,7 @@ echo '执行预处理完毕';
 
 访问code15.php的效果：
 
-![1530781475689](img/36.png)
+![1530781475689](36.png)
 
 ==**小结3**==：
 
@@ -792,7 +804,7 @@ echo '执行预处理完毕';
 
 在PDO中，封装了一个类用于实现对PDO中的错误进行异常处理方式的处理，这个类名字PDOException，它的本质就是继承了PHP的系统类Exception，所以PHP系统类Exception具有的操作，也都被PDOException所拥有。
 
-![1530745661759](img/6.png)
+![1530745661759](6.png)
 
 
 
@@ -848,7 +860,7 @@ try{
 }
 ```
 
-![1530782781145](img/37.png)
+![1530782781145](37.png)
 
 所谓的抛出基于PDOException类的对象，实际上就是将PDOException类的对象赋值给$a。
 

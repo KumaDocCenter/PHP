@@ -1,4 +1,14 @@
-
+---
+title: GD图像处理技术案例
+date: 2019-02-28 12:36:17
+updated: 2019-02-28 12:36:17 
+mathjax: false
+categories: 
+tags:
+typora-root-url: GD图像处理技术案例
+typora-copy-images-to: GD图像处理技术案例
+top: 1
+---
 
 
 # GD图像处理技术
@@ -62,7 +72,7 @@ imagedestroy($src);
 
 访问code14.php，效果如下：
 
-![1530173036884](img/28.png)
+![1530173036884](28.png)
 
 
 
@@ -123,7 +133,7 @@ imagedestroy($src);
 
 访问code15.php的效果：
 
-![1530174118370](img/29.png)
+![1530174118370](29.png)
 
 固定宽高的缩略图，可能导致缩小后图片变形的效果，所以我们还需要改进。
 
@@ -204,7 +214,7 @@ imagedestroy($src);
 
 访问code16.php，效果为：
 
-![1530176230852](img/30.png)
+![1530176230852](30.png)
 
 
 
@@ -279,7 +289,7 @@ imagejpeg($img);
 
 访问code17.php，效果为：
 
-![1530178153757](img/31.png)
+![1530178153757](31.png)
 
 
 

@@ -1,3 +1,15 @@
+---
+title: http协议与文件编程案例
+date: 2019-02-28 12:36:17
+updated: 2019-02-28 12:36:17 
+mathjax: false
+categories: 
+tags:
+typora-root-url: http协议与文件编程案例
+typora-copy-images-to: http协议与文件编程案例
+top: 1
+---
+
 
 
 ## 案例：文件下载
@@ -57,13 +69,13 @@ echo file_get_contents($oriFile);
 
 访问code13.php，点击下载txt文件，
 
-![1529919943723](img/23.png)
+![1529919943723](23.png)
 
 点击之后，弹出上图所示下载框，新名字为a.txt，
 
 然后选择下载路径，直接下载，
 
-![1529920013880](img/24.png)
+![1529920013880](24.png)
 
 
 

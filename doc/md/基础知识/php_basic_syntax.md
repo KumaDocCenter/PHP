@@ -1,3 +1,16 @@
+---
+title: PHP基本语法
+date: 2019-02-28 12:36:17
+updated: 2019-02-28 12:36:17 
+mathjax: false
+categories: 
+tags:
+typora-root-url: imgs
+typora-copy-images-to: imgs
+top: 1
+---
+
+
 # PHP基本语法
 
 ----
@@ -6,12 +19,12 @@
 
 ## PHP标签
 
-**为什么要有PHP标签？**   \\\\
+**为什么要有PHP标签？**   
 PHP是可以嵌入到HTML代码中的！ 
 
-![img](note/php_basic_syntax_01.png)
+![img](php_basic_syntax_01.png)
 
-**注意：**  \\\\
+**注意：**  
 * 如果当PHP与HTML代码进行混编时，当前的这个文件的扩展名一定要**.php**文件 而不是HTML文件。
 * PHP引擎在解析PHP代码时，它只会选择解析属于PHP标签的这一部分代码
 
@@ -25,24 +38,24 @@ PHP是可以嵌入到HTML代码中的！
 
 最常见的标签 
 
-![img](note/php_basic_syntax_02.png)
+![img](php_basic_syntax_02.png)
 
 
 
 ### <?   ?>
 
-短标签 ，但是PHP默认不支持！需要在``php.ini``配置中开启   \\\\
+短标签 ，但是PHP默认不支持！需要在``php.ini``配置中开启   
 
 第一步：需要在``php.ini``这个配置文件中 开启支持短标签的配置  
 
-![img](note/php_basic_syntax_03.png)
+![img](php_basic_syntax_03.png)
 
-第二步：需要重启apache服务器  `` httpd.exe -k restart ``  \\\\
+第二步：需要重启apache服务器  `` httpd.exe -k restart ``  
 
 
 第三步：在02-PHP/code目录下 创建了一个叫demo03.php文件
 
-![](note/php_basic_syntax_04.png)
+![](php_basic_syntax_04.png)
 
 ----
 
@@ -52,11 +65,11 @@ PHP是可以嵌入到HTML代码中的！
 
 要求每一条PHP语句的后面都要加上一个英文状态下面的分号 ， 如果不加会出现语法错误！
 
-![img](note/php_basic_syntax_05.png)
+![img](php_basic_syntax_05.png)
 
  
 
-在一个PHP文件中有一种情况不需要加分号   \\\\
+在一个PHP文件中有一种情况不需要加分号   
 在整个PHP文件中的最后一条语句 不需要分号，因为在PHP的结束标签中它会默认有一个分号，但是建议大家每条语句都要加分号
 
 ----
@@ -90,7 +103,7 @@ PHP是可以嵌入到HTML代码中的！
 
 块注释一般多用于函数中或者方法！  其实块注释也是有格式！这个格式它可以是PHPDocument这个工具提取到！因为当一个程序员看到当前的函数的注释的时候，就不用去看代码，已经可以明白这个函数是用来做什么的！
 
-![](note/php_basic_syntax_06.png)
+![](php_basic_syntax_06.png)
 
 ----
 
@@ -102,7 +115,7 @@ PHP是可以嵌入到HTML代码中的！
 
 可以输出变量或者常量的值或者表达式的值！
 
-![](note/php_basic_syntax_07.png) 
+![](php_basic_syntax_07.png) 
 
 
 
@@ -110,7 +123,7 @@ PHP是可以嵌入到HTML代码中的！
 
 可以输出变量，常量 ，表达式的值！它可以一次输出多个 每一个之间使用逗号来分隔！
 
-![](note/php_basic_syntax_08.png) 
+![](php_basic_syntax_08.png) 
 
 
 
@@ -118,11 +131,11 @@ PHP是可以嵌入到HTML代码中的！
 
 它是我们以后在工作中**使用的最多**的 它可以输出变量、常量 、表达式的值 还可以输出其类型以及其它额外信息  并且还可以打印数组！它也可以一次输出多个每一个之间使用逗号来分隔！
 
-![](note/php_basic_syntax_09.png) 
+![](php_basic_syntax_09.png) 
 
 
 
-**注意**   \\\\
+**注意**   
 * 布尔类型一定要使用var_dump来打印 
 * 数组不能使用print和echo 语句来打印 
 
@@ -130,15 +143,15 @@ PHP是可以嵌入到HTML代码中的！
 
 ### printf
 
-它比较擅长输出文本与变量的组合产物    \\\\
+它比较擅长输出文本与变量的组合产物    
 
 
-printf这个输出语句通常是由两部分组成！    \\\\
-前半部分是由引号括起来的字符串，后半部分是变量  如果前半部分有变量 需要使用一个变量的占位符来表示  变量的占位符通常是用%来表示的。它要与后面的变量一一对应！    \\\\
+printf这个输出语句通常是由两部分组成！    
+前半部分是由引号括起来的字符串，后半部分是变量  如果前半部分有变量 需要使用一个变量的占位符来表示  变量的占位符通常是用%来表示的。它要与后面的变量一一对应！    
 
  
 
-**常见的变量占位符**      \\\\
+**常见的变量占位符**      
 
 * **%c**：将后面的变量认为是一个整数，并显示为该整数对应的ASCII码字符    
 
@@ -151,24 +164,24 @@ printf这个输出语句通常是由两部分组成！    \\\\
 
  
 
-有符号：表示有正负之分      \\\\
-无符号：只能表示正数      \\\\ 
+有符号：表示有正负之分      
+无符号：只能表示正数       
 
-![](note/php_basic_syntax_10.png) 
+![](php_basic_syntax_10.png) 
 
  
 
 ### print_r
 
-一般是用来打印数组，与var_dump的区别是，print_r只打印数组的元素的下标和元素的值，不输出其他的额外信息！  \\\\
+一般是用来打印数组，与var_dump的区别是，print_r只打印数组的元素的下标和元素的值，不输出其他的额外信息！  
 
-常见的：**echo**、**var_dump**   \\\\
+常见的：**echo**、**var_dump**   
 
 
 **数组只能使用var_dump与print_r来输出。**
 
 
-![](note/php_basic_syntax_11.png) 
+![](php_basic_syntax_11.png) 
 
 
 
