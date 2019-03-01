@@ -1,19 +1,22 @@
 ---
-title: index
-date: 2019-02-28 12:36:17
-updated: 2019-02-28 12:36:17 
-mathjax: false
-categories: 
-tags:
+title: Index 
+date: 2019-03-01 16:49:24 
+updated: 2019-03-01 16:49:24 
+mathjax: false 
+categories:  
+tags: 
 typora-root-url: index
 typora-copy-images-to: index
-top: 1
+top: 0
 ---
 
 
-## [ä¼šè¯æŠ€æœ¯](ä¼šè¯æŠ€æœ¯.md)
-
-* [ä¼šè¯æŠ€æœ¯ç›¸å…³æ¦‚å¿µ](ä¼šè¯æŠ€æœ¯.md)
-* [COOKIEæŠ€æœ¯](ä¼šè¯æŠ€æœ¯.md)
-* [SESSIONæŠ€æœ¯](ä¼šè¯æŠ€æœ¯.md)
-
+# Ë÷Òı 
+ 	
+## »á»°¼¼Êõ 
+[±¾µØÔ¤ÀÀ](»á»°¼¼Êõ.md)    [Blog](http://blog.kuma8866.top/posts/790821465/)     [Github](https://github.com/KumaDocCenter/PHP/blob/master/doc/md/»á»°¼¼Êõ/»á»°¼¼Êõ.md)
+ 
+* »á»°¼¼ÊõÏà¹Ø¸ÅÄî
+* COOKIE¼¼Êõ
+* SESSION¼¼Êõ
+ 
